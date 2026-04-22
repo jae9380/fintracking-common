@@ -18,6 +18,9 @@ repositories {
 }
 
 dependencies {
+    //  Kafka
+    compileOnly 'org.springframework.kafka:spring-kafka:3.3.0'
+
     compileOnly 'org.springframework.boot:spring-boot-starter-web:3.3.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:3.3.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-web:3.3.0'
