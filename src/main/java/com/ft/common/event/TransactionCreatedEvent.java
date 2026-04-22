@@ -7,6 +7,7 @@ public record TransactionCreatedEvent(
         String eventId,
         Long userId,
         Long accountId,
+        Long toAccountId,
         Long transactionId,
         BigDecimal amount,
         String type,
