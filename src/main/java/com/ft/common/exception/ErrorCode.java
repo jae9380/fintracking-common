@@ -52,7 +52,8 @@ public enum ErrorCode {
     // Notification
     NOTIFICATION_NOT_FOUND(404, "알림을 찾을 수 없습니다."),
     NOTIFICATION_NO_ACCESS(403, "해당 알림에 대한 접근 권한이 없습니다."),
-    NOTIFICATION_INVALID_WEBHOOK(400, "유효하지 않은 Slack 웹훅 URL입니다."),
+    NOTIFICATION_SEND_FAILED(400, "메일 발송을 실패했습니다."),
+
 
     // Batch
     BATCH_MAX_RETRY_EXCEEDED(500, "배치 작업 최대 재시도 횟수를 초과했습니다."),

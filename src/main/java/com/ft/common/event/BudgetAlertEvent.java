@@ -7,7 +7,10 @@ public record BudgetAlertEvent(
         Long userId,
         Long budgetId,
         Long categoryId,
+        String categoryName,
         String alertType,
         BigDecimal spentAmount,
-        BigDecimal limitAmount
+        BigDecimal limitAmount,
+        BigDecimal usageRate,
+        String yearMonth
 ) {}

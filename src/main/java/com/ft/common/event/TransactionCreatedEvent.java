@@ -12,5 +12,6 @@ public record TransactionCreatedEvent(
         BigDecimal amount,
         String type,
         Long categoryId,
+        String categoryName,
         LocalDateTime transactedAt
 ) {}
