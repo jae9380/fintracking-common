@@ -13,7 +13,10 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 
-@AutoConfiguration
+@AutoConfiguration(afterName = {
+        "org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration",
+        "org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration"
+})
 public class CommonAutoConfiguration {
 
     @Bean
