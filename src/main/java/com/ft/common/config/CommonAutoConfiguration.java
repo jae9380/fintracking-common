@@ -4,6 +4,7 @@ import com.ft.common.exception.GlobalExceptionHandler;
 import com.ft.common.metric.aspect.DomainMetricAspect;
 import com.ft.common.metric.aspect.KafkaMetricAspect;
 import com.ft.common.metric.helper.DomainMetricHelper;
+import com.ft.common.metric.helper.BatchMetricHelper;
 import com.ft.common.metric.helper.ExternalApiMetricHelper;
 import com.ft.common.metric.helper.KafkaMetricHelper;
 import io.micrometer.core.instrument.MeterRegistry;
@@ -41,6 +42,13 @@ public class CommonAutoConfiguration {
     @ConditionalOnBean(MeterRegistry.class)
     public ExternalApiMetricHelper externalApiMetricHelper(MeterRegistry meterRegistry) {
         return new ExternalApiMetricHelper(meterRegistry);
+    }
+
+    @Bean
+    @ConditionalOnClass(name = "io.micrometer.core.instrument.MeterRegistry")
+    @ConditionalOnBean(MeterRegistry.class)
+    public BatchMetricHelper batchMetricHelper(MeterRegistry meterRegistry) {
+        return new BatchMetricHelper(meterRegistry);
     }
 
     // ─── Metric Aspects ────────────────────────────────────────────────────────
