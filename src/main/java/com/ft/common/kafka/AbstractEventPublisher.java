@@ -12,7 +12,7 @@ public abstract class AbstractEventPublisher<T> {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    protected abstract String topic();
+    public abstract String topic();
 
     public void publish(T event) {
         kafkaTemplate.send(topic(), event);
