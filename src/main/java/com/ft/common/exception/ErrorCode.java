@@ -41,6 +41,7 @@ public enum ErrorCode {
     TRANSACTION_INVALID_DATE(400,"거래일은 비어있을 수 없습니다."),
     TRANSACTION_CATEGORY_REQUIRED(400, "수입/지출 거래는 카테고리가 필요합니다."),
     TRANSACTION_INVALID_AMOUNT(400, "거래 금액은 0보다 커야 합니다."),
+    TRANSACTION_INVALID_TRANSFER(400, "이체 거래는 대상 계좌가 필요합니다."),
 
     // Budget
     BUDGET_NOT_FOUND(404, "예산 정보를 찾을 수 없습니다."),
