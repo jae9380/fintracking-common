@@ -13,5 +13,5 @@ public record TransactionDeletedEvent(
         String type,
         Long categoryId,
         LocalDateTime transactedAt
-        
+
 ) {}
